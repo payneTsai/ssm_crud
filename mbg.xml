@@ -8,8 +8,8 @@
     <context id="DB2Tables" targetRuntime="MyBatis3">
         <jdbcConnection driverClass="com.mysql.jdbc.Driver"
                         connectionURL="jdbc:mysql://localhost:3306/ssm_crud"
-                        userId="root"
-                        password="root">
+                        userId="peter"
+                        password="peter">
         </jdbcConnection>
 
         <javaTypeResolver >
