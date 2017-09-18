@@ -18,19 +18,19 @@
 
         <!--java bean生成位置-->
         <javaModelGenerator targetPackage="com.ipeak.crud.bean"
-                            targetProject=".\src\main\java">
+                            targetProject="./src/main/java">
             <property name="enableSubPackages" value="true" />
             <property name="trimStrings" value="true" />
         </javaModelGenerator>
         <!--sql映射文件生成位置-->
         <sqlMapGenerator targetPackage="mapper"
-                         targetProject=".\src\main\resources">
+                         targetProject="./src/main/resources">
             <property name="enableSubPackages" value="true" />
         </sqlMapGenerator>
         <!--mapper借口生成的位置-->
         <javaClientGenerator type="XMLMAPPER"
                              targetPackage="com.ipeak.crud.dao"
-                             targetProject=".\src\main\java">
+                             targetProject="./src/main/java">
             <property name="enableSubPackages" value="true" />
         </javaClientGenerator>
 
