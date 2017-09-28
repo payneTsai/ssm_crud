@@ -94,4 +94,27 @@ public interface EmployeeMapper {
      * @mbggenerated Mon Sep 18 15:50:10 CST 2017
      */
     int updateByPrimaryKey(Employee record);
-}
+
+
+    /**
+     * 新增方法
+     * */
+    List<Employee> selectByExampleWithDept(EmployeeExample example);
+
+    Employee selectByPrimaryKeyWithDept(Integer empId);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ }

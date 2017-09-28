@@ -1,5 +1,3 @@
-package com.ipeak.crud.test;
-
 import com.mchange.v2.c3p0.PooledDataSource;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;

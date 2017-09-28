@@ -1,6 +1,3 @@
-package com.ipeak.crud.test;
-
-
 import org.mybatis.generator.api.MyBatisGenerator;
 import org.mybatis.generator.config.Configuration;
 import org.mybatis.generator.config.xml.ConfigurationParser;

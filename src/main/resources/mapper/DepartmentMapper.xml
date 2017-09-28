@@ -236,4 +236,5 @@
     set dept_name = #{deptName,jdbcType=VARCHAR}
     where dept_id = #{deptId,jdbcType=INTEGER}
   </update>
+    <!---->
 </mapper>

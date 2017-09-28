@@ -8,9 +8,9 @@
        http://www.springframework.org/schema/context
        http://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop.xsd">
 
-
+    <bean id="Department" class="com.ipeak.crud.bean.Department"></bean>
     <context:annotation-config />
-    <context:component-scan base-package="com.ipeak.crud.*" >
+    <context:component-scan base-package="com.ipeak.*" >
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
 
@@ -24,14 +24,14 @@
         <property name="password" value="${jdbc.password}" />
     </bean>
 
-    <!-- SqlsessionFactory -->
+     <!--SqlsessionFactory -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
         <!-- 数据源 -->
         <property name="dataSource" ref="pooledDataSource"/>
         <!-- mybatis配置文件 -->
         <property name="configLocation" value="classpath:mybatis-config.xml" ></property>
         <!-- mybatis mapper 文件路劲 -->
-        <!--<property name="mapperLocations" value="classpath:mapper/*.xml"></property>-->
+        <property name="mapperLocations" value="classpath:mapper/*.xml"></property>
     </bean>
 
     <!-- 配置mybatis扫描器 -->
@@ -56,7 +56,7 @@
     <aop:config>
         <!--切入点表达式  -->
         <aop:pointcut expression="execution(* com.ipeak.crud.service..*.*(..))" id="txPoint"/>
-        <!-- 配置事务zeng'q -->
+         <!--配置事务 -->
         <aop:advisor advice-ref="txAdvice" pointcut-ref="txPoint" />
     </aop:config>
 </beans>
